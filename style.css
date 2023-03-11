@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container{
+	max-width:1320px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+body{
+	font-family: 'Rubik', sans-serif;
+}
+header{
+	padding: 20px 0;
+}
+.row{
+	display:flex;
+	align-items: center;
+	
+}
+a{
+	text-decoration: none;
+	transition: 0.3s;
+}
+ul li{
+	list-style: none;
+}
+ul li a{
+	text-decoration: none;
+	color:black;
+	font-size: 15px;
+	line-height: 26px;
+	font-weight: 500;
+	position: relative;
+
+}
+ul li a:hover{
+	color: #51b56d;
+}
+ul li a::after{
+	content: '';
+	position:absolute;
+	height: 2px;
+	width: 100%;
+	left: 0;
+	bottom: -7px;
+	background-color: #51b56d;
+	transition: 0.3s;
+	transform: scale(0);
+}
+ul li a:hover::after{
+	transform: scale(1);
+}
+.activ{
+	color:  #51b56d;
+}
+.col-left{
+	width:20%;
+}
+.col-mid{
+	width: 60%;
+}
+.col-right {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.menubar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menubar ul li{
+	padding: 0 15px;
+}
+.col-right a{
+	text-decoration: none;
+}
+.button {
+    padding: 15px 30px;
+    background-color: #51b56d;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.button::before{
+	content: '';
+	position: absolute;
+	height: 15px;
+	width: 15px;
+	background-color: #3c8d53;
+	border-radius: 50%;
+	z-index: -1;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 100%;
+	transition: 0.3s;
+}
+.button:hover::before{
+	width: 100%;
+	height: 100%;
+	border-radius: 0;
+	top: 0;
+}
+.button-one{
+	background-color: #e0f2e5;
+	color:green;
+	transition: .3s;
+	margin-right: 15px;
+}
+.button-one:hover{
+	background-color:#51b56d;
+	color: #e0f2e5;
+}
+
+/*==================================about-area======================================*/
+.about-section{
+	padding: 90px 0;
+}
+.about-left {
+    width: 44%;
+}
+.about-left h2{
+	font-size: 52px;
+	line-height: 62px;
+	font-weight: 700;
+	margin:0px 0 20px;
+    display: inline-block;
+}
+.about-left p{
+	color: #888888;
+	font-size: 16px;
+	line-height: 27px;
+	font-weight: 400;
+}
+.about-right{
+	width: 56%;
+	text-align: right;
+}
+.about-right img{
+	max-width: 100%;
+}
+.about-section .button{
+	margin-top: 30px
+}
+.about-section:hover h2{
+	color: red;
+}
+
+
+@media (max-width: 575px){
+	.about-section .row{
+		flex-wrap: wrap;
+	}
+	.about-left{
+		width: 100%;
+	}
+	.about-right{
+		width: 100%;
+	}
+	.about-left h2 {
+	    font-size: 34px;
+	    line-height: 44px;
+	}	
+}
